@@ -30,6 +30,6 @@ while True:
 print('=-' * 30)
 for pessoa in turma:
     for k, v in pessoa.items():
-        print(f' - {k} é igual a {v}')
+        print(f' - {k} é igual a: {v}')
     print('=-' * 3)    
 print('=-' * 30)
