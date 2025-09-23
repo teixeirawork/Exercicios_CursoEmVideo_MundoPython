@@ -13,23 +13,33 @@ while True:
     nasc = int(input('Digite em qual ano você nasceu: '))
     cpts = int(input('Digte o ano da sua Carteira de Trabalho: '))
     idade  = ano - nasc
-    timeworker = ano - cpts
+    
     
     
     cadworker['nome'] = nome
     cadworker['idade'] = idade
-    cadworker['tempocpts'] = timeworker
+    cadworker['tempocpts'] = ano - cpts
     
-    if timeworker > 0:
+    
+    
+    if  0 < cadworker['tempocpts'] < 35:
+        
         contrato = int(input('Digite o ano que foi contratado: '))
         salario = float(input('Digite o valor do salário: '))
         cadworker['contrato'] = contrato
         cadworker['salario'] = salario
+        
+        tempocpts = ano - contrato
+        aposentadoria = 35 - tempocpts
+        idade_aposentar = idade + aposentadoria
+         
+        cadworker['tempo_aposentar'] = aposentadoria
+        cadworker['idade_aposentar'] = idade_aposentar
     
-    if 0 < timeworker <= 75:
-        aposentadoria = ano - cadworker['contrato']
-        tempaposentado = 75 - aposentadoria
-        cadworker['Aposentadoria'] = tempaposentado
+    elif cadworker['tempocpts'] == ano:
+        cadworker['Aposentadoria'] = 'Sem Carteira'    
+    
+    
     else:
         cadworker['Aposentadoria'] = 'Aposentado'
     
@@ -43,11 +53,13 @@ while True:
     
     if opcao == 'N':
         break
-    
-
-print()    
+   
+   # PARA MOSTRAR UMA LISTA ORDENADA COM DICIONARIOS, PRECISA-SE MONTAR UM DICIONARIO AUXILIAR NO PRIMEIRO FOR
+   # EM SEGUIDA PERCORRER ESSE DICIONÁRIO AUXLIAR PARA EXIBIR EM FORMATO DE LISTA {INDEX = VALOR} 
+   
 print('-='*10,'Cadastro do trabalhador','-='*10)
-for t, i in enumerate(trabalhador):
-    print (f'O trabalhador {t} tem as {i}', end=' ')
-    print()
-
+for idx, t in enumerate(trabalhador,1): # neste for define-se  t como um novo dicionario
+    print(f'trabalhador {idx}: ')
+    for chave, valor in t.items():  # este for percorre o novo dicionaro t
+        print(f' {chave}: {valor}')
+    print('----')
