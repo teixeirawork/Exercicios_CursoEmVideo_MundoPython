@@ -66,3 +66,60 @@ print(f'\n D - As mulheres são: {mulher}')
 
 
 print('-----------------FIM----------------')
+
+
+"""
+CODIGO GUANABARA
+
+galera = list()
+pessoa = dict()
+soma = media = 0
+
+while True:
+
+    pessoa.clear()
+    
+    pessoa["nome"] = str(input('Digite o nome: '))
+    pessoa["idade"] = int(input('Digite sua idade: '))
+    
+
+    while True:
+        pessoa["sexo"] = str(input('Digite o sexo [M/F]: ')).upper()[0]
+        if pessoa["sexo"] in 'MF':
+            break
+        print('Erro! por favor digite apenas M ou F')
+
+    soma += galera['idade']
+    galera.append(pessoa.copy())
+    
+    while True:
+        resp = str(input('Deseja Continuar ! [S/N]: ))    
+        if resp not in 'SN':
+            break
+        print('Erro! por favor digite apenas S ou N')
+
+    if resp == 'S':
+        break    
+
+print('-='*30)
+print(f'A - Ao todo temos {len(galera)} pessoas cadastradas')
+media = soma / len(galera)
+print('-='*30)
+print(f'B - A média de idade é de {media:5.2f} anos.')
+print('-='*30)
+print(f'C - As mulheres cadastradas foram: ', end=' ')
+for p in galera:
+    if p['sexo'] == 'F'
+        print(f'{p["nome"]} ', end=" ")
+print()
+print('-='*30)
+print('D - Pessoas que estão acima da media: ')
+for p in galera:
+    if p["idade"] >= media:
+       print('     ')
+       for k , v in p.items():
+            print(f'{k} = {v}; ', end='')
+       print() 
+
+print('-='*10,'ENCERRADO','-='*10)
+"""
