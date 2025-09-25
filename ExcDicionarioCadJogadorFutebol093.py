@@ -44,5 +44,5 @@ print(f'O jogador: {dados['nome']} jogou {dados["partidas"]}: ')
 for i, g in enumerate(campeonato):
     print(f' => Na partida {i+1}º o jogador fez: {g} gols', end=' ')
     print()
-print(f'Foi um total de {dados["totalgols"]}')
+print(f'Foi um total de {dados["totalgols"]}')  
 print('-='*10,'TERCEIRA  AMOSTRA','-='*10)
