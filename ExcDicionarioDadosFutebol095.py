@@ -1,0 +1,51 @@
+##Exercício Python 095: 
+# Aprimore o desafio 93 para que ele funcione com vários jogadores,
+# incluindo um sistema de visualização de detalhes do aproveitamento de cada jogador.
+
+
+
+
+# - CADASTRO DOS JOGADORES
+
+campeonato = list()
+jogadores = list()
+
+
+while True:
+  
+    golsjogo = 0
+    
+    cadastro = dict()
+   
+    
+    print('-='*10,'CADASTRO DE JOGADORES','-='*10)
+    
+    cadastro['nome'] = str(input('Nome do jogador: '))
+    cadastro['partidas'] = int(input('Quantas partidas jogou: '))
+    
+    if cadastro['partidas'] > 0:
+        for p in range (1,cadastro['partidas']+1):
+            gol = int(input(f'Quantos gols o jogagodr {cadastro['nome']} fez na {p}º partida: '))
+            campeonato.append(gol)
+            golsjogo += gol
+    
+    
+    
+    cadastro['totalgols'] = golsjogo
+    jogadores.append(cadastro.copy())
+    jogadores.append(campeonato[:])
+    
+    campeonato.clear()
+    
+    
+    
+    resp = str(input(('Deseja continuar: [S/N]'))).upper().strip()[0]
+        
+    if resp not in 'SN':
+        resp = str(input('Opção inválida digite apenas S ou N:'))
+    if resp =='N':
+        break
+    
+
+
+print(jogadores)
