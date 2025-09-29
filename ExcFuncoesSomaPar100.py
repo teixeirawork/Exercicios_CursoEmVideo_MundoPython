@@ -10,17 +10,20 @@ def sorteia(lista):
     print('Sorteando valores da Lista: ', end='')
     print()
     for c in range (0,5):
-        lista.append(randint(1,10))
-        print(f'{c}', end='', flush=True)
+        c = randint(1,10)
+        lista.append(c)
+        print(f'{c}', end=' ', flush=True)
         sleep(0.3)
+    print()
     print('PRONTO!')    
 
 
 def SomaPar(lista):
+    soma = 0
     for n in lista:
         if n % 2 == 0:
-            lista.append(n)
-        
+            soma += n
+    print(f'Somando os valores pares de {lista} o total é: {soma}')
      
     
 sorteados = list()
@@ -28,10 +31,10 @@ sorteados = list()
 
 print('-'*20,'NUMEROS SORTEADOS','-'*20)
 sorteia(sorteados)
-print(sorteados)
+
 print('-'*60)
 
 print('-'*20,'NUMEROS PARES','-'*20)
-SomaPar(sorteia(sorteados))
-print(sorteados)
+SomaPar(sorteados)
+
 print('-'*60)
