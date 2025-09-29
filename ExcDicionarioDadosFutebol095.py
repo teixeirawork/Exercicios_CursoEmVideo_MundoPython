@@ -7,7 +7,7 @@
 
 # - CADASTRO DOS JOGADORES
 
-campeonato = list()
+
 jogadores = list()
 
 
@@ -16,7 +16,7 @@ while True:
     golsjogo = 0
     
     cadastro = dict()
-   
+    campeonato = list()
     
     print('-='*10,'CADASTRO DE JOGADORES','-='*10)
     
@@ -30,10 +30,9 @@ while True:
             golsjogo += gol
     
     
-    
+    cadastro['gols'] = campeonato[:]
     cadastro['totalgols'] = golsjogo
     jogadores.append(cadastro.copy())
-    jogadores.append(campeonato[:])
     
     campeonato.clear()
     
@@ -46,6 +45,25 @@ while True:
     if resp =='N':
         break
     
+print('-'*40)
+print(f'{"cod":<4}{"nome":<15}{"gols":<20}{"total":<5}')
+print('-'*40)
+for k , v in enumerate(jogadores):
+    print(f'{k:<4}{v["nome"]:<15}{str(v["gols"]):<20}{v["totalgols"]:<5}', end='')
+    print()
+print('-'*40)        
 
-
-print(jogadores)
+while True:
+    busca = int(input('Digte o codigo do jogador que deseja buscar [999 para parar]: '))
+     
+    if busca == 999:
+        break
+    
+    if busca >= len(jogadores):
+        print(f'ERRO! o jogador com o codigo {busca} não existe')
+    else:
+        print(f'Levantamento do jogador {jogadores[busca]["nome"]}:')
+        for k, v in enumerate(jogadores[busca]["gols"]):
+            print(f' No jogo {k+1} fez {v} gols.')
+    print('-'*40)
+print('<<VOLTE SEMPRE>>')
