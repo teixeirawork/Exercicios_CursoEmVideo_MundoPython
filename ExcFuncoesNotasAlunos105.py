@@ -1,3 +1,12 @@
+##Exercício Python 105: 
+# Faça um programa que tenha uma função notas()
+# que pode receber várias notas de alunos e vai retornar um dicionário com as seguintes informações:
+# TOTAL DE NOTAS
+# MAIOR NOTA
+# MENOR NOTA
+# MEDIA DA TURMA
+
+
 def notas(*notas, sit=False):
     """
     -> Calcula estatísticas de notas de alunos.
@@ -24,11 +33,12 @@ print('-'*15, 'CADASTRO DE ALUNOS', '-'*15)
 
 turma = list()   # turma = []
 
+# while que cadastra uma turma de alunos cada aluno com varias notas
 while True:
-    aluno = dict() # turma = {}
+    aluno = dict() # aluno = {}
     aluno['nome'] = input('Nome do aluno: ').strip()
-    notas_aluno = []
-    
+    notas_aluno = list()
+    # WHILE QUE DIGITA QUANTAS NOTAS QUISER    
     while True:
         nota = input('Digite uma nota do aluno (ou ENTER para parar): ').strip()
         if nota == '':
@@ -47,11 +57,15 @@ while mostra_sit not in 'SN':
     mostra_sit = input('Digite apenas S ou N: ').upper().strip()[0]
 
 print('-'*30)
+
+# um for que chama a função notas e verifca se vai ver ou não a situação da turma
 for aluno in turma:
+    
     if mostra_sit == 'S':
         resultado = notas(*aluno['notas'], sit=True)
     else:
         resultado = notas(*aluno['notas'])
+    
     print(f"Aluno: {aluno['nome']}")
     print(f"Notas: {aluno['notas']}")
     print(f"Resumo: {resultado}")
