@@ -70,3 +70,27 @@ for aluno in turma:
     print(f"Notas: {aluno['notas']}")
     print(f"Resumo: {resultado}")
     print('-'*30)
+
+# Mostrar dados da turma 
+
+soma_nota = quantidade_notas = 0
+
+for aluno in turma:
+    soma_nota += sum(aluno['notas'])
+    quantidade_notas += len(aluno['notas'])
+
+print('-'*30)
+print(f'Soma total das notas da turma: {soma_nota}')
+print('-'*30)
+
+print(f'Quantidade de Notas da turma: {quantidade_notas}')
+print('-'*30)
+
+print(f'Quantidade de Alunos da turma {len(aluno)}')
+print('-'*30)
+if quantidade_notas > 0:
+    print(f'Média geral da Turma: {soma_nota /quantidade_notas:.2f}')
+    print('-'*30)
+else:
+    print('nenhuma nota cadastrada')
+    print('-'*30)
