@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90cd60ca-60d5-449f-92d1-25c70ad18f1a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Modulos/Exc107ImportFuncoesPy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Modulos/Exc107ImportFuncoesPy.py" afterDir="false" />
-    </list>
+    <list default="true" id="90cd60ca-60d5-449f-92d1-25c70ad18f1a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,9 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="33bkGA0txynsz25Mv0xF6CxGQlZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,6 +22,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -37,6 +36,7 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
       </set>
     </attachedChunks>
   </component>
@@ -48,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759593063428</updated>
       <workItem from="1759593084185" duration="283000" />
+      <workItem from="1759773711226" duration="24000" />
     </task>
     <servers />
   </component>
